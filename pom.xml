@@ -10,6 +10,9 @@
 
     <properties>
         <testng.version>7.1.0</testng.version>
+        <maven.compiler.source.version>1.6</maven.compiler.source.version>
+        <maven.compiler.target.version>1.6</maven.compiler.target.version>
+
     </properties>
 
     <dependencies>
@@ -19,5 +22,18 @@
             <version>${testng.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${maven.compiler.source.version}</source>
+                    <target>${maven.compiler.target.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
